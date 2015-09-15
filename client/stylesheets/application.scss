@@ -1,0 +1,30 @@
+$bgColor: #222;
+$fgColor: #eee;
+$accColor: #ffba3b;
+
+html, body {
+  height: 100%;
+}
+
+.app {
+  min-height: 100%;
+  background-color: $bgColor;
+  color: $fgColor;
+  font-family: "Trebuchet MS", sans-serif;
+
+  a {
+    color: $accColor;
+  }
+
+  text-align: center;
+
+  h2 {
+    margin: 150px 0 30px 0;
+  }
+
+  #login-buttons {
+    display: block;
+    width: 150px;
+    margin: 0 auto 100px auto;
+  }
+}
