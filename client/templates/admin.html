@@ -13,3 +13,17 @@
 <template name="adminProjectsCategoriesColumn">
   {{value.title}}
 </template>
+
+<template name="adminPicturesFilenameColumn">
+  <a href="{{doc.url store="large"}}" target="_blank">{{value}}</a>
+</template>
+
+<template name="adminPicturesProjectColumn">
+  {{project}}
+</template>
+
+<template name="adminPicturesActionsColumn">
+  <a class="hidden-xs btn btn-xs btn-danger btn-delete">
+    <i class="fa fa-times"></i>
+  </a>
+</template>

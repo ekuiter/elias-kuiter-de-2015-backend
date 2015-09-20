@@ -3,7 +3,7 @@ Meteor.startup(function() {
     if (Meteor.userId()) {
       Meteor.subscribe("projectsWithDetails");
       Meteor.subscribe("categories");
-      Meteor.subscribe("images");
+      Meteor.subscribe("imagesWithDetails");
     }
   });
 });
