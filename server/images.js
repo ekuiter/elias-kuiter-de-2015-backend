@@ -40,6 +40,10 @@ Images.allow({
   download: loggedIn
 });
 
+Projects.allow({
+  update: loggedIn
+});
+
 Meteor.publish("imagesWithDetails", function() {
   if (!this.userId)
     this.error(new Meteor.Error(401));
