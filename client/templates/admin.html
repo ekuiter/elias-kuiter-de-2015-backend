@@ -23,7 +23,20 @@
 </template>
 
 <template name="adminPicturesActionsColumn">
-  <a class="hidden-xs btn btn-xs btn-danger btn-delete">
+  <a data-action="rename" class="hidden-xs btn btn-xs btn-primary">
+    <i class="fa fa-pencil"></i>
+  </a>
+  <a data-action="remove" class="hidden-xs btn btn-xs btn-danger btn-delete">
     <i class="fa fa-times"></i>
   </a>
+</template>
+
+<template name="adminPicturesNew">
+  <div class="box box-default">
+    <div class="box-body">
+        {{#autoForm id="admin_insert" collection="Projects" type="insert"}}
+          {{> afQuickField name="imageIds"}}
+        {{/autoForm}}
+    </div>
+  </div>
 </template>
