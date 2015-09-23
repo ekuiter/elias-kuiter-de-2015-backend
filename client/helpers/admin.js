@@ -57,3 +57,16 @@ Template.adminPicturesActionsColumn.events({
       self.doc.remove();
   }
 });
+
+Template.adminDatabaseWidget.helpers({
+  stats: ReactivePromise(function() {
+    return Meteor.promise("databaseStats");
+  }, {}),
+  formatBytes: function(bytes) {
+    if (!bytes) return "&nbsp;";
+    return (bytes / 1024 / 1024).toFixed(1);
+  },
+  maxSize: function() {
+    return 512;
+  }
+});
