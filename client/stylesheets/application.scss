@@ -32,3 +32,18 @@ html, body {
 textarea.form-control {
   font-family: Consolas, Monaco, "Lucida Console", monospace;
 }
+
+.database {
+  .btn {
+    float: left;
+    margin-right: 10px;
+  }
+
+  form {
+    float: left;
+  }
+
+  .clear {
+    clear: both;
+  }
+}

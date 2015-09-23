@@ -22,5 +22,15 @@
 </template>
 
 <template name="adminDatabase">
-
+  <div class="box box-default database">
+    <div class="box-body">
+      <a data-action="stats" class="btn btn-primary">Show stats</a>
+      <a data-action="compact" class="btn btn-primary">Compact database</a>
+      {{> appDumpDownload}}
+      {{> appDumpUpload}}
+      <div class="clear"></div>
+      <hr>
+      <pre rel="results"></pre>
+    </div>
+  </div>
 </template>
