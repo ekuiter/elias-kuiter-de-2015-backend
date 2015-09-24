@@ -1,0 +1,32 @@
+<template name="adminPicturesFilenameColumn">
+  <a href="{{doc.url store="large"}}" target="_blank">{{value}}</a>
+</template>
+
+<template name="adminPicturesProjectColumn">
+  {{project}}
+</template>
+
+<template name="adminPicturesActionRequiredColumn">
+  {{#unless hasSuggestedName}}
+    <a data-action="rename" class="btn btn-xs btn-warning" style="font-weight: bold">&nbsp;!&nbsp;</a>
+  {{/unless}}
+</template>
+
+<template name="adminPicturesActionsColumn">
+  <a data-action="rename" data-prompt class="hidden-xs btn btn-xs btn-primary">
+    <i class="fa fa-pencil"></i>
+  </a>
+  <a data-action="remove" class="hidden-xs btn btn-xs btn-danger btn-delete">
+    <i class="fa fa-times"></i>
+  </a>
+</template>
+
+<template name="adminPicturesNew">
+  <div class="box box-default">
+    <div class="box-body">
+      {{#autoForm id="admin_insert" collection="Projects" type="insert"}}
+        {{> afQuickField name="imageIds"}}
+      {{/autoForm}}
+    </div>
+  </div>
+</template>
